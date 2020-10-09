@@ -1,4 +1,4 @@
-let base = 'https://swapi.dev/api/'
+let year = document.getElementById("year").value;
 let month = document.getElementById("month").value;
 let day = document.getElementById("day").value;
 
