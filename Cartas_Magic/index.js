@@ -40,16 +40,14 @@ function capturaValor() {
       resultado = data.cards.filter(elemento => elemento.types == selectedOption)
       console.log(resultado);
 
-
-      card += `<h4>${resultado.cards.name}</h4>
-        <p>${resultado.cards.text}</p>
-        <img src="${resultado.cards.imageUrl}" alt="imagen">
-        `;
-     
+      resultado.forEach(element => {
+       // console.log(element.name, element.text, element.imgUrl)
+      card += `<h4>${element.name}</h4>
+              <p>${element.text}</p>
+              <img src="${element.imageUrl}" alt="imagan de ${element.name}"> `; 
+      });
+       document.getElementById("cartas").innerHTML = card;
     })
-     document.getElementById("cartas").innerHTML = card;
-
-
     }
    
     
