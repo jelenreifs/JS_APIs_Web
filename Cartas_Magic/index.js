@@ -38,10 +38,8 @@ function capturaValor() {
     //.then(data => resultado = data.cards.filter(elemento => elemento.type == selectedOption))
     .then(data => {
       resultado = data.cards.filter(elemento => elemento.types == selectedOption)
-      console.log(resultado);
 
       resultado.forEach(element => {
-       // console.log(element.name, element.text, element.imgUrl)
       card += `<h4>${element.name}</h4>
               <p>${element.text}</p>
               <img src="${element.imageUrl}" alt="imagan de ${element.name}"> `; 
